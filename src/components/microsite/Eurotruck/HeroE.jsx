@@ -16,7 +16,7 @@ import img5 from "../../../assets/Eurotruck/eurotruck3.jpg"
 
 const SmoothScrollHero = () => {
   return (
-    <div className="bg-zinc-950">
+    <div>
       <ReactLenis
         root
         options={{

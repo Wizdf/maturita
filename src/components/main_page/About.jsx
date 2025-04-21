@@ -41,7 +41,7 @@ const AboutSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="text-6xl font-orbi font-bold mb-8"
+            className="text-6xl font-orbi mb-8"
           >
             O nás
           </motion.h1>

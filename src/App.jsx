@@ -1,10 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HashLink } from "react-router-hash-link"; // ✅ Added for anchor navigation
 
 // Page Sections (main page)
 import NavBar from "./components/main_page/Navbar";
 import Hero from "./components/main_page/Herosekce/Hero";
-import Parallax from './components/main_page/Parallax';
 import Newsletter from "./components/main_page/Footer/Newsletter";
 import About from "./components/main_page/About";
 import Me from "./components/main_page/Me/Me";

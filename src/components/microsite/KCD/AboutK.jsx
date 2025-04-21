@@ -2,10 +2,11 @@ import React from "react";
 import PicCareer from "../../../assets/KCD/aboutkcd.webp";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animations/animation";
+import { HashLink } from "react-router-hash-link";
 
 const Career = () => {
   return (
-    <div id="game" className="bg-amber-500 text-white">
+    <div id="game" className="bg-[#F2ECB6] text-black">
       <div className="container py-[80px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -20,7 +21,7 @@ const Career = () => {
             />
           </div>
 
-          <div className="space-y-5 flex justify-center flex-col xl:max-w-[550px]">
+          <div className="space-y-5 flex justify-center flex-col xl:max-w-[500px]">
             <motion.h1
               variants={SlideUp(0.2)}
               initial="initial"
@@ -34,7 +35,7 @@ const Career = () => {
               variants={SlideUp(0.4)}
               initial="initial"
               whileInView="animate"
-              className="text-sm leading-7"
+              className="text-l leading-7"
             >
               Vítej v srdci středověkých Čech, kde svět není černobílý a každý krok má svou váhu. Kingdom Come tě zavede do doby, kdy přežití záviselo na tvé vůli, meči a cti.
 Objev realistický RPG svět bez magie, zato s hlubokými příběhy, historickou přesností a výzvami, které tě nenechají v klidu.
@@ -45,14 +46,16 @@ Historie ještě nikdy nebyla tak osobní.
             </motion.p>
 
             
-              <motion.button
-                variants={SlideUp(0.6)}
-                initial="initial"
-                whileInView="animate"
-                className="primary-btn rounded-xl text-white border-white hover:bg-green-300 bg-transparent hover:text-white mt-5  shadow-[5px_5px_0px_0px_#6c6c6c]"
-              >
-                Stáhnout
-              </motion.button>
+            <HashLink smooth to="#download">
+            <motion.button
+              variants={SlideUp(0.6)}
+              initial="initial"
+              whileInView="animate"
+              className="primary-btn rounded-xl text-black border-black bg-transparent hover:bg-black hover:text-white mt-5 shadow-[5px_5px_0px_0px_#6c6c6c]"
+            >
+              Stáhnout
+            </motion.button>
+          </HashLink>
           </div>
         </div>
       </div>

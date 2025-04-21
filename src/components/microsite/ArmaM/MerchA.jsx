@@ -61,7 +61,7 @@ export default function MerchSection() {
   const currentProduct = products[safeActiveProduct] || products[0];
 
   return (
-    <div id='merch' ref={containerRef} className="text-white w-full min-h-[90vh] flex flex-col items-center justify-center p-4 md:p-8">
+    <div id='merch' ref={containerRef} className="text-white bg-[#6C5940] w-full min-h-[90vh] flex flex-col items-center justify-center p-4 md:p-8">
       {/* 🛍 Nadpis sekce s animací */}
       <motion.h1
         variants={ZoomIn(0.1)}
@@ -183,7 +183,7 @@ export default function MerchSection() {
             href={currentProduct.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-black py-2 px-6 md:px-8 hover:bg-gray-100 transition-colors duration-300"
+            className="bg-black text-white py-2 px-6 md:px-8 hover:bg-white hover:text-black transition-colors duration-300"
           >
             ZAKOUPIT
           </a>
@@ -195,7 +195,7 @@ export default function MerchSection() {
         {products.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full ${safeActiveProduct === index ? 'bg-white' : 'bg-gray-700'}`}
+            className={`w-2 h-2 rounded-full ${safeActiveProduct === index ? 'bg-white' : 'bg-black'}`}
           ></div>
         ))}
       </div>

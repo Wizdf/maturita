@@ -18,14 +18,14 @@ const Download = () => {
       rotationRange={25}
       images={[img1, img2, img3, img4, img5, img6, img7]}
     >
-      <section id="download" className="min-h-screen w-full bg-white flex flex-col items-center justify-center gap-10 px-4 py-10 text-center">
+      <section id="download" className="min-h-screen w-full flex flex-col items-center justify-center gap-10 px-4 py-10 text-center">
         {/* 🧭 Nadpis sekce */}
         <motion.h1
           variants={ZoomIn(0.1)}
           initial="initial"
           whileInView="animate"
           viewport={{ once: false }}
-          className="text-4xl sm:text-6xl font-mafia tracking-tight text-black"
+          className="text-4xl sm:text-6xl font-euro tracking-tight text-white"
         >
           STÁHNUTÍ
         </motion.h1>

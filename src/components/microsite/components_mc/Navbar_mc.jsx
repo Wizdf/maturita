@@ -62,7 +62,7 @@ const NavBar = () => {
         <nav className="relative flex size-full items-center justify-center">
 
           {/* Logo vlevo */}
-          <div className="absolute left-4 flex items-center gap-7">
+          <div className="absolute left-10 flex items-center gap-7">
             <Link to="/">
               <img src="./logo.png" alt="logo" className="w-14" />
             </Link>
@@ -83,7 +83,7 @@ const NavBar = () => {
           </div>
 
           {/* Tlačítka vpravo (desktop) */}
-          <div className="absolute right-4 hidden md:flex gap-6">
+          <div className="absolute right-10 hidden md:flex gap-6">
             <HashLink
               smooth
               to="#download"

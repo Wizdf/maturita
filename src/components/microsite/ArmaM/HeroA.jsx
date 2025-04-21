@@ -5,7 +5,6 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { SiSpacex } from "react-icons/si";
 import { useRef } from "react";
 
 import img1 from "../../../assets/Arma/aboutarma.webp"
@@ -16,7 +15,7 @@ import img5 from "../../../assets/Arma/arma1.jpg"
 
 const SmoothScrollHero = () => {
   return (
-    <div className="bg-zinc-950">
+    <div>
       <ReactLenis
         root
         options={{

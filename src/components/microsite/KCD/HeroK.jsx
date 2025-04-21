@@ -5,7 +5,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { SiSpacex } from "react-icons/si";
+
 import { useRef } from "react";
 
 import img1 from "../../../assets/KCD/kcdmain.webp"
@@ -13,11 +13,10 @@ import img2 from "../../../assets/KCD/headerk.jpeg"
 import img3 from "../../../assets/KCD/kcd1.jpg"
 import img4 from "../../../assets/KCD/kcd2.jpg"
 import img5 from "../../../assets/KCD/kcd3.jpg"
-import Kingdom from './Kingdom';
 
 const SmoothScrollHero = () => {
   return (
-    <div className="bg-zinc-950">
+    <div className="bg-[#462309]">
       <ReactLenis
         root
         options={{

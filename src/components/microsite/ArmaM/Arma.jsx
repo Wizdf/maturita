@@ -10,7 +10,7 @@ import Footer from "../components_mc/Footer_mc"
 
 const Arma = () => {
   return (
-    <div className='bg-[#780000]'>
+    <div className='bg-[#262920]'>
       <Navbar/>
       <Hero/>
       <About/>

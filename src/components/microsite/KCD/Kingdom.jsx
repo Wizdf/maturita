@@ -9,7 +9,7 @@ import Footer from "../components_mc/Footer_mc"
 
 const Kingdom = () => {
   return (
-    <div className='bg-[#780000]'>
+    <div className='bg-[#462309]'>
       <Navbar/>
       <Hero/>
       <About/>

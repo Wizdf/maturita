@@ -10,7 +10,7 @@ import Footer from "../components_mc/Footer_mc"
 
 const EuroT = () => {
   return (
-    <div className='bg-[#780000]'>
+    <div className='bg-[#012D20]'>
       <Navbar/>
       <Hero/>
       <About/>

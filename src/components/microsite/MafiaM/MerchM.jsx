@@ -61,8 +61,7 @@ export default function MerchSection() {
   const currentProduct = products[safeActiveProduct] || products[0];
 
   return (
-    <div id='merch' ref={containerRef} className="text-white w-full min-h-[90vh] flex flex-col items-center justify-center p-4 md:p-8">
-      {/* 🛍 Nadpis sekce */}
+    <div id='merch' ref={containerRef} className="bg-black text-white w-full min-h-[90vh] flex flex-col items-center justify-center p-4 md:p-8">
       <motion.h1
         variants={ZoomIn(0.1)}
         initial="initial"
@@ -74,7 +73,7 @@ export default function MerchSection() {
       </motion.h1>
 
       <div className="flex flex-col md:flex-row md:ml-52 w-full max-w-5xl justify-center items-start md:items-center gap-12">
-        {/* 📜 Levá strana - navigace */}
+        {/* Left nav */}
         <motion.div
           variants={SlideLeft(0.2)}
           initial="initial"
@@ -87,7 +86,9 @@ export default function MerchSection() {
               <button
                 key={product.id}
                 onClick={() => setActiveProduct(index)}
-                className={`w-full max-w-xs py-2 px-4 border-l-4 transition-all duration-300 text-left ${safeActiveProduct === index ? 'border-white text-white' : 'border-gray-700 text-gray-500'}`}
+                className={`w-full max-w-xs py-2 px-4 border-l-4 transition-all duration-300 text-left ${
+                  safeActiveProduct === index ? 'border-black text-black bg-white' : 'border-gray-300 text-gray-400'
+                }`}
               >
                 {product.name}
               </button>
@@ -95,13 +96,13 @@ export default function MerchSection() {
           </div>
 
           <div className="hidden md:block">
-            <div className="absolute top-[-10px] left-[-20px] w-px bg-gray-700 h-80"></div>
+            <div className="absolute top-[-10px] left-[-20px] w-px bg-gray-500 h-80"></div>
             <div
               ref={scrollRef}
               className="h-72 scrollbar-custom overflow-y-auto w-full"
               style={{
                 scrollbarWidth: 'thin',
-                scrollbarColor: '#ffffff #000000'
+                scrollbarColor: '#000000 #ffffff'
               }}
             >
               {[...Array(products.length)].map((_, i) => (
@@ -114,9 +115,13 @@ export default function MerchSection() {
               {products.map((product, index) => (
                 <div
                   key={product.id}
-                  className={`py-8 ${index !== 0 ? 'mt-3' : ''} transition-all duration-300 border-l-2 pl-4 ${safeActiveProduct === index ? 'border-white' : 'border-gray-700'}`}
+                  className={`py-8 ${index !== 0 ? 'mt-3' : ''} transition-all duration-300 border-l-2 pl-4 ${
+                    safeActiveProduct === index ? 'border-black' : 'border-gray-300'
+                  }`}
                 >
-                  <p className={`text-lg font-medium ${safeActiveProduct === index ? 'text-white' : 'text-gray-500'}`}>
+                  <p className={`text-lg font-medium ${
+                    safeActiveProduct === index ? 'text-black bg-white inline-block px-2' : 'text-gray-400'
+                  }`}>
                     {product.name}
                   </p>
                 </div>
@@ -125,7 +130,7 @@ export default function MerchSection() {
           </div>
         </motion.div>
 
-        {/* ✍️ Střed - popis produktu */}
+        {/* Center - description */}
         <motion.div
           variants={SlideUp(0.3)}
           initial="initial"
@@ -147,7 +152,7 @@ export default function MerchSection() {
           </AnimatePresence>
         </motion.div>
 
-        {/* 🖼 Pravá strana - obrázek a tlačítko */}
+        {/* Right - image and button */}
         <motion.div
           variants={SlideRight(0.4)}
           initial="initial"
@@ -178,7 +183,7 @@ export default function MerchSection() {
             href={currentProduct.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-black py-2 px-6 md:px-8 hover:bg-gray-100 transition-colors duration-300"
+            className="bg-black text-white py-2 px-6 md:px-8 hover:text-black hover:bg-white transition-colors duration-300 border border-white"
           >
             ZAKOUPIT
           </a>
@@ -189,7 +194,9 @@ export default function MerchSection() {
         {products.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full ${safeActiveProduct === index ? 'bg-white' : 'bg-gray-700'}`}
+            className={`w-2 h-2 rounded-full ${
+              safeActiveProduct === index ? 'bg-white' : 'bg-black'
+            }`}
           ></div>
         ))}
       </div>
@@ -200,15 +207,15 @@ export default function MerchSection() {
         }
 
         .scrollbar-custom::-webkit-scrollbar-track {
-          background: #000000;
-        }
-
-        .scrollbar-custom::-webkit-scrollbar-thumb {
           background: #ffffff;
         }
 
+        .scrollbar-custom::-webkit-scrollbar-thumb {
+          background: #000000;
+        }
+
         .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-          background: #aaaaaa;
+          background: #333333;
         }
       `}</style>
     </div>

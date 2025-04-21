@@ -116,7 +116,7 @@ export default function MerchSection() {
                   key={product.id}
                   className={`py-8 ${index !== 0 ? 'mt-3' : ''} transition-all duration-300 border-l-2 pl-4 ${safeActiveProduct === index ? 'border-white' : 'border-gray-700'}`}
                 >
-                  <p className={`text-lg font-medium ${safeActiveProduct === index ? 'text-white' : 'text-gray-500'}`}>
+                  <p className={`text-lg font-medium ${safeActiveProduct === index ? 'text-white' : 'text-[#F2ECB6]'}`}>
                     {product.name}
                   </p>
                 </div>
@@ -178,7 +178,7 @@ export default function MerchSection() {
             href={currentProduct.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-black py-2 px-6 md:px-8 hover:bg-gray-100 transition-colors duration-300"
+            className="bg-white text-black py-2 px-6 md:px-8 hover:bg-black hover:text-white transition-colors duration-300"
           >
             ZAKOUPIT
           </a>

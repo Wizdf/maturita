@@ -11,7 +11,7 @@ import Footer from "../components_mc/Footer_mc"
 
 const Mafia = () => {
   return (
-    <div className='bg-[#780000]'>
+    <div className='bg-[#df2531]'>
       <Navbar/>      
       <Hero/>
       <AboutM/>

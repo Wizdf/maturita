@@ -2,10 +2,11 @@ import React from "react";
 import PicCareer from "../../../assets/Arma/aboutarma.webp";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animations/animation";
+import { HashLink } from "react-router-hash-link";
 
 const Career = () => {
   return (
-    <div id="game" className="bg-amber-500 text-white">
+    <div id="game" className="bg-[#6C5940] text-white">
       <div className="container py-[80px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -25,9 +26,9 @@ const Career = () => {
               variants={SlideUp(0.2)}
               initial="initial"
               whileInView="animate"
-              className="text-5xl font-bold font-rasa text-amber-950"
+              className="text-5xl font-arma text-white"
             >
-              O Arma Sérii
+              O Arma Serie
             </motion.h1>
 
             <motion.p
@@ -41,15 +42,16 @@ const Career = () => {
             Hráči se zapojují do taktických operací s důrazem na strategii a spolupráci. Arma 3 (2013) se stala nejúspěšnějším dílem série a dodnes má aktivní komunitu. V roce 2022 studio představilo Arma Reforger jako technologický základ pro budoucí Arma 4.
             </motion.p>
 
-            
+            <HashLink smooth to="#download">
               <motion.button
                 variants={SlideUp(0.6)}
                 initial="initial"
                 whileInView="animate"
-                className="primary-btn rounded-xl text-white border-white hover:bg-green-300 bg-transparent hover:text-white mt-5  shadow-[5px_5px_0px_0px_#6c6c6c]"
+                className="primary-btn rounded-xl text-white border-white hover:bg-black bg-transparent hover:text-white mt-5  shadow-[5px_5px_0px_0px_#6c6c6c]"
               >
                 Stáhnout
               </motion.button>
+              </HashLink>
           </div>
         </div>
       </div>

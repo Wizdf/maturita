@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import bg from "../../../assets/bghero1.png"; // ✅ Background image import
 import gamer from "../../../assets/heroimage.webp"; // ✅ Renamed from cyber
 import { SlideLeft, SlideRight, ZoomIn, FadeIn } from "../../animations/animation"; // 🎬 Importy animací
+import { HashLink } from "react-router-hash-link";
 
 const Gradient = () => (
   <>
@@ -83,31 +84,36 @@ const Hero = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="text-right max-w-md text-white"
+            className="text-center md:text-right mt-6 max-w-md text-xl  text-white"
           >
-            <p className="text-white/90 mb-4">
+            <p className="text-white/90 mb-6 text-xl">
               Nejlepší české hry, jejich příběhy a <br />
               oficiální merch – na jednom místě.
             </p>
-            <div className="flex gap-4 justify-end">
-              <motion.button
-                variants={FadeIn(0.4)}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: false }}
-                className="border px-4 py-2 border-white hover:bg-white hover:text-black transition"
-              >
-                VÍCE INFO
-              </motion.button>
-              <motion.button
-                variants={FadeIn(0.6)}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: false }}
-                className="border px-4 py-2 border-white hover:bg-white hover:text-black transition"
-              >
-                OBJEV HRY
-              </motion.button>
+            <div className="flex gap-4 mt-6 justify-end">
+            <HashLink smooth to="#onas">
+            <motion.button
+              variants={FadeIn(0.4)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: false }}
+              className="border px-4 py-2 border-white hover:bg-white hover:text-black transition"
+            >
+              VÍCE INFO
+            </motion.button>
+          </HashLink>
+
+          <HashLink smooth to="#micronav">
+            <motion.button
+              variants={FadeIn(0.6)}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: false }}
+              className="border px-4 py-2 border-white hover:bg-white hover:text-black transition"
+            >
+              OBJEV HRY
+            </motion.button>
+          </HashLink>
             </div>
           </motion.div>
         </div>

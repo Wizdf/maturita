@@ -5,7 +5,7 @@ import { SlideUp } from "../../animations/animation";
 
 const About = () => {
   return (
-    <div id="studio" className="bg-[#FEFAE0]">
+    <div id="studio">
       <div className="container pt-[150px] pb-[100px] sm:py-20 md:py-24 lg:pt-[145px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -14,7 +14,7 @@ const About = () => {
               variants={SlideUp(0.2)}
               initial="initial"
               whileInView="animate"
-              className="text-4xl sm:text-5xl md:text-[5em] font-roadrage text-center md:text-left"
+              className="text-4xl sm:text-5xl md:text-[5em] font-euro text-white text-center md:text-left"
             >
               O SCS Software
             </motion.h1>
@@ -22,7 +22,7 @@ const About = () => {
               variants={SlideUp(0.4)}
               initial="initial"
               whileInView="animate"
-              className="text-gray-500 text-base sm:text-lg md:text-md leading-7 text-center md:text-left"
+              className="text-white text-base sm:text-lg md:text-md leading-7 text-center md:text-left"
             >
               SCS Software je české herní studio založené v roce 1997, specializující se na dopravní simulátory. Proslavilo se sériemi Euro Truck Simulator a American Truck Simulator, které si získaly miliony hráčů díky realistické jízdní fyzice, detailním mapám a podpoře modifikací.
               <br /><br />
@@ -35,7 +35,7 @@ const About = () => {
                   variants={SlideUp(0.6)}
                   initial="initial"
                   whileInView="animate"
-                  className="primary-btn rounded-xl bg-transparent text-black hover:text-white hover:bg-green-300 mt-6 sm:mt-8 md:mt-4 shadow-[5px_5px_0px_0px_#6c6c6c]"
+                  className="primary-btn rounded-xl bg-transparent text-white hover:text-white hover:bg-black mt-6 sm:mt-8 md:mt-4 shadow-[5px_5px_0px_0px_#6c6c6c]"
                 >
                   Zjistit Více 
                 </motion.button>

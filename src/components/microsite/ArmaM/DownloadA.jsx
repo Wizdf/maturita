@@ -18,16 +18,16 @@ const Download = () => {
       rotationRange={25}
       images={[img1, img2, img3, img4, img5, img6, img7]}
     >
-      <section id="download" className="min-h-screen w-full bg-white flex flex-col items-center justify-center gap-10 px-6 py-14 text-center">
+      <section id="download" className="min-h-screen w-full flex flex-col items-center justify-center gap-10 px-6 py-14 text-center">
         {/* 🧲 Nadpis sekce */}
         <motion.h1
           variants={ZoomIn(0.1)}
           initial="initial"
           whileInView="animate"
           viewport={{ once: false }}
-          className="text-5xl md:text-7xl font-mafia tracking-tight text-black"
+          className="text-5xl md:text-7xl font-arma tracking-tight text-white"
         >
-          STÁHNUTÍ
+          STahnout
         </motion.h1>
 
         {/* 🎥 YouTube iframe s animací */}
@@ -62,9 +62,9 @@ const Download = () => {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24px" width="24px">
               <path strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" stroke="#f1f1f1" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" />
             </svg>
-            Stáhnout Hru
+            Stáhnout
             <div className="absolute opacity-0 -bottom-full rounded-md py-2 px-2 bg-black bg-opacity-70 left-1/2 -translate-x-1/2 group-hover:opacity-100 transition-opacity shadow-lg">
-              Stáhnout Hru
+              Stáhnout 
             </div>
           </button>
         </motion.a>

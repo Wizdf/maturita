@@ -4,6 +4,7 @@ import { FaPhone } from "react-icons/fa6";
 import { LuMessageSquare } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { SlideUp } from "../../animations/animation";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -23,50 +24,43 @@ const Footer = () => {
             <p>Jaselská 826, 280 90 Kolín 2</p>
             <p>@ 2025 Neobohemia All rights reserved</p>
           </div>
-          {/* Footer Link */}
+
+          {/* Footer Links */}
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-4">
-              <h1 className="text-xl font-semibold">Home</h1>
-              <ul className="text-sm space-y-4">
+              <h1 className="text-xl font-semibold">NAVIGACE</h1>
+              <ul className="text-l space-y-4">
                 <li>
-                  <a href="#">Home</a>
+                  <HashLink smooth to="/#uvod">O nás</HashLink>
                 </li>
                 <li>
-                  <a href="#">Home</a>
+                  <HashLink smooth to="/#og">Zakladatel</HashLink>
                 </li>
                 <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Home</a>
+                  <HashLink smooth to="/#micronav">Microsites</HashLink>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h1 className="text-xl font-semibold">Home</h1>
-              <ul className="text-sm space-y-4">
+              <h1 className="text-xl font-semibold">DALŠÍ</h1>
+              <ul className="text-l space-y-4">
                 <li>
-                  <a href="#">Home</a>
+                  <HashLink smooth to="#kontakt">Kontakt</HashLink>
                 </li>
                 <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Home</a>
+                  <HashLink smooth to="#sitemap">Sitemap</HashLink>
                 </li>
               </ul>
             </div>
           </div>
+
           {/* Contact section */}
           <div className="space-y-4">
-            <h1 className="text-xl font-semibold"></h1>
+            <h1 className="text-xl font-semibold">KONTAKT</h1>
             <ul className="text-base font-semibold space-y-4">
               <li className="flex items-center space-x-3">
                 <FaPhone />
-                <a href="#">+420 604 500 556</a>
+                <a href="tel:+420604500556">+420 604 500 556</a>
               </li>
               <li className="flex items-center space-x-3">
                 <LuMessageSquare />
@@ -77,7 +71,7 @@ const Footer = () => {
         </div>
 
         {/* bottom section */}
-        <p className="text-center text-sm font-semibold  border-t-2 pt-5 mt-5">
+        <p className="text-center text-sm font-semibold border-t-2 pt-5 mt-8">
           &copy; 2025 Neobohemia rights reserved
         </p>
       </div>
