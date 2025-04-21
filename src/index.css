@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+
+body{
+  font-family: "Quicksand", sans-serif;
+}
+
+.nav-hover-btn {
+    @apply relative ms-10 text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+  }
+
+  .floating-nav {
+    @apply bg-black rounded-lg border;
+  }
+
+  .primary-btn {
+    @apply text-sm font-semibold lg:text-base border-[1px] border-black px-4 py-2 shadow-[5px_5px_0px_0px] hover:bg-black hover:text-white duration-300 hover:shadow-[5px_5px_0px_0px_#6c6c6c];
+  }
+
+  /* Mesh gradient background */
+/* Soft mesh gradient background */
+/* Mesh gradient background */
+
+@font-face {
+  font-family: 'Mafia';
+  src: url('./assets/font/GALVANIZED.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kcd';
+  src: url('./assets/font/Firlest-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arma';
+  src: url('./assets/font/armalite.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Euro';
+  src: url('./assets/font/Alphacorsa Personal Use.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+  .navbutton {
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #fff;
+    height: 40px;
+    font-size: 0.7rem;
+    line-height: 14px;
+    letter-spacing: 1.2px;
+    transition: .2s .1s;
+    background-image: linear-gradient(90deg, #1c1c1c, #6220fb);
+    overflow: hidden;
+  
+    -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+    clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  
+    /* simulate border with inner shadow */
+    box-shadow: 0 0 0 1px #fff inset;
+  }
+  
+  
+  .navbutton:hover {
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .about-image {
+    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
+  }
+
+  .arrow-gradient {
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 10%,
+      rgba(255, 255, 255, 0.000025) 50%,
+      rgba(255, 255, 255, 0.000025) 50%,
+      rgba(255, 255, 255, 0.025) 100%
+    );
+  }
+  
+    /* about section */
+    .grid-container {
+      @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    }
+  
+    .grid-headtext {
+      @apply text-xl font-semibold mb-2 text-white ;
+    }
+  
+    .grid-subtext {
+      @apply text-[#afb0b6] text-base ;
+    }
+  
+    .c-space {
+      @apply sm:px-10 px-5;
+    }
+  
+    .copy-container {
+      @apply cursor-pointer flex justify-center items-center gap-2;
+    }
+
+    .btn {
+      @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
+    }
+  
+    .btn-ping {
+      @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
+    }
+  
+    .btn-ping_dot {
+      @apply relative inline-flex rounded-full h-3 w-3 bg-green-500;
+    }
+  
+    .copy-container {
+      @apply cursor-pointer flex justify-center items-center gap-2;
+    }
+
+    .arrow-btn {
+      @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full ;
+    }
+  
+    .tech-logo {
+      @apply w-10 h-10 rounded-md p-2 bg-neutral-100  backdrop-filter backdrop-blur-lg flex justify-center items-center;
+    }
+  
