@@ -6,22 +6,15 @@ const AboutSection = () => {
   return (
     <section
       id="uvod"
-      className="relative text-white py-28 px-6 md:px-20 overflow-hidden text-lg"
+      className="relative bg-[#a1d4e9] rounded-t-2xl text-white py-28 px-6 md:px-20 overflow-hidden text-lg"
     >
       {/* 🎨 Dekorativní rozmazané kruhy v pozadí */}
-      <motion.div
-        variants={FadeIn(0.2)}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: false }}
-        className="absolute top-[-100px] left-[-100px] w-96 h-96 bg-blue-600 opacity-20 rounded-full blur-[150px] pointer-events-none z-0"
-      />
       <motion.div
         variants={FadeIn(0.3)}
         initial="initial"
         whileInView="animate"
         viewport={{ once: false }}
-        className="absolute bottom-[-100px] right-[-100px] w-96 h-96 bg-red-900 opacity-20 rounded-full blur-[150px] pointer-events-none z-0"
+        className="absolute bottom-[-100px] right-[-100px] w-96 h-96 bg-white opacity-20 rounded-full blur-[150px] pointer-events-none z-0"
       />
 
       <div className="relative z-10 max-w-[1320px] mx-auto flex flex-col md:flex-row items-start gap-40">
@@ -38,7 +31,7 @@ const AboutSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="text-sm uppercase tracking-widest mb-3 text-gray-400"
+            className="text-sm uppercase tracking-widest mb-3"
           >
             Kdo jsme a proč to děláme
           </motion.p>
@@ -58,7 +51,7 @@ const AboutSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="text-gray-200 leading-8 px-2"
+            className="leading-8 px-2"
           >
             NeoBohemia je kreativní spojení médií, gamingu a stylu – vznikla s cílem oslavit legendární tituly české herní scény.
             Od kultovní Mafie přes realistický svět Kingdom Come až po vojenské mise v Armě a přežití v DayZ, propojujeme hráče s kulturou, která tyto hry formovala.

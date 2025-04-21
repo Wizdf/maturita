@@ -18,7 +18,7 @@ const Download = () => {
       rotationRange={25}
       images={[img1, img2, img3, img4, img5, img6, img7]}
     >
-      <section className="min-h-screen w-full bg-white flex flex-col items-center justify-center gap-10 px-6 py-14 text-center">
+      <section id="download" className="min-h-screen w-full bg-white flex flex-col items-center justify-center gap-10 px-6 py-14 text-center">
         {/* 🧲 Nadpis sekce */}
         <motion.h1
           variants={ZoomIn(0.1)}

@@ -3,8 +3,9 @@ import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link"; // ✅ Add this
+import { HashLink } from "react-router-hash-link";
 
+// Navigační položky
 const navItems = [
   { name: "O nás", link: "/#uvod" },
   { name: "Zakladatel", link: "/#og" },
@@ -14,31 +15,36 @@ const navItems = [
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navContainerRef = useRef(null);
+  const headerRef = useRef(null);
   const { y: currentScrollY } = useWindowScroll();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
-  // ✅ Only render NavBar on the homepage
-  if (location.pathname !== "/") {
-    return null;
-  }
+  // ✅ Navigace se zobrazuje pouze na homepage
+  if (location.pathname !== "/") return null;
 
   useEffect(() => {
+    const header = headerRef.current;
+
+    // ✅ Blur efekt při scrollování
     if (currentScrollY === 0) {
-      setIsNavVisible(true);
-      navContainerRef.current?.classList.remove("floating-nav");
-    } else if (currentScrollY > lastScrollY) {
+      header?.classList.remove("nav-blur-bg");
+    } else {
+      header?.classList.add("nav-blur-bg");
+    }
+
+    // ✅ Zobrazit / skrýt navigaci při scrollování
+    if (currentScrollY > lastScrollY) {
       setIsNavVisible(false);
-      navContainerRef.current?.classList.add("floating-nav");
-    } else if (currentScrollY < lastScrollY) {
+    } else {
       setIsNavVisible(true);
-      navContainerRef.current?.classList.add("floating-nav");
     }
 
     setLastScrollY(currentScrollY);
   }, [currentScrollY, lastScrollY]);
 
+  // ✅ GSAP animace slide in/out
   useEffect(() => {
     gsap.to(navContainerRef.current, {
       y: isNavVisible ? 0 : -100,
@@ -50,39 +56,54 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-20 md:mx-40 mx-5 border-none transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0 top-4 z-50 h-20 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 transition-all duration-700"
     >
-      <header className="absolute top-1/2 w-full -translate-y-1/2">
+      <header
+        ref={headerRef}
+        className="w-full h-full border border-transparent rounded-xl transition-all duration-300"
+      >
         <nav className="relative flex size-full items-center justify-center">
 
-          {/* Logo - Absolute left */}
+          {/* Logo vlevo */}
           <div className="absolute left-4 flex items-center gap-7">
             <Link to="/">
               <img src="./logo.png" alt="logo" className="w-14" />
             </Link>
           </div>
 
-          {/* Desktop Navigation - Centered */}
+          {/* Navigace – prostředek (desktop) */}
           <div className="hidden md:flex gap-8">
             {navItems.map((item, index) => (
               <HashLink
                 key={index}
                 smooth
                 to={item.link}
-                className="nav-hover-btn"
+                className="nav-hover-link"
               >
                 {item.name}
               </HashLink>
             ))}
           </div>
 
-          {/* Desktop Right Buttons */}
+          {/* Tlačítka vpravo (desktop) */}
           <div className="absolute right-4 hidden md:flex gap-6">
-            <ClippedButton>Kontakt</ClippedButton>
-            <ClippedButton>Sitemap</ClippedButton>
+            <HashLink
+              smooth
+              to="#kontakt"
+              className="navbutton bg-blue-700 hover:bg-blue-800"
+            >
+              Kontakt
+            </HashLink>
+            <HashLink
+              smooth
+              to="#sitemap"
+              className="navbutton bg-[#780000] hover:bg-[#910000]"
+            >
+              Sitemap
+            </HashLink>
           </div>
 
-          {/* Mobile Menu - Absolute right */}
+          {/* Mobilní menu (hamburger + obsah) */}
           <div className="absolute right-4 md:hidden">
             <button
               onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -90,10 +111,11 @@ const NavBar = () => {
             >
               {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
+
+            {/* ✅ Mobilní menu – odkazy + tlačítka */}
             {isMenuOpen && (
               <div
-                className="absolute right-0 top-12 bg-white shadow-lg rounded-md p-4 z-50"
-                style={{ minWidth: "150px" }}
+                className="absolute right-0 top-12 bg-white shadow-lg rounded-md p-4 z-50 w-44"
               >
                 <ul className="flex flex-col gap-4">
                   {navItems.map((item, index) => (
@@ -108,6 +130,28 @@ const NavBar = () => {
                       </HashLink>
                     </li>
                   ))}
+
+                  {/* ✅ Nové odkazy pro mobilní menu */}
+                  <li>
+                    <HashLink
+                      smooth
+                      to="#kontakt"
+                      className="text-black hover:text-blue-500"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Kontakt
+                    </HashLink>
+                  </li>
+                  <li>
+                    <HashLink
+                      smooth
+                      to="#sitemap"
+                      className="text-black hover:text-blue-500"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Sitemap
+                    </HashLink>
+                  </li>
                 </ul>
               </div>
             )}
@@ -116,35 +160,6 @@ const NavBar = () => {
         </nav>
       </header>
     </div>
-  );
-};
-
-const ClippedButton = ({ children }) => {
-  return (
-    <button className="relative group w-[140px] h-[40px] uppercase text-xs tracking-widest font-medium cursor-pointer">
-      <svg
-        className="absolute top-0 left-0 w-full h-full pointer-events-none"
-        viewBox="0 0 200 40"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <linearGradient id="btnGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#1c1c1c" />
-            <stop offset="100%" stopColor="#6220fb" />
-          </linearGradient>
-        </defs>
-        <polygon
-          points="0,0 200,0 200,25 185,40 15,40 0,25"
-          fill="url(#btnGradient)"
-          stroke="#fff"
-          strokeWidth="1"
-          className="transition-all duration-300 group-hover:stroke-[#00e0ff] group-hover:stroke-[2]"
-        />
-      </svg>
-      <span className="relative z-10 text-white px-4 transition-all duration-300 group-hover:tracking-wider">
-        {children}
-      </span>
-    </button>
   );
 };
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import cyber from "../../../assets/heroimage.webp";
+import bg from "../../../assets/bghero1.png"; // ✅ Background image import
+import gamer from "../../../assets/heroimage.webp"; // ✅ Renamed from cyber
 import { SlideLeft, SlideRight, ZoomIn, FadeIn } from "../../animations/animation"; // 🎬 Importy animací
 
 const Gradient = () => (
@@ -8,7 +9,7 @@ const Gradient = () => (
       variants={FadeIn(0.3)}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: false }} // viewport: { once: false } → umožňuje opakovanou animaci při scrollování
+      viewport={{ once: false }}
       className="relative z-1 h-6 mx-2.5 bg-white/10 shadow-xl rounded-b-[1.25rem] lg:h-6 lg:mx-8"
     />
     <motion.div
@@ -59,7 +60,10 @@ const BottomLine = () => (
 
 const Hero = () => {
   return (
-    <div className="min-h-screen">
+    <div
+      className="min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }} // ✅ Using imported background
+    >
       <section className="relative w-full min-h-[115vh] mx-auto flex flex-col justify-center">
         <div className="w-full max-w-[90rem] px-6 sm:px-16 mx-auto flex flex-col md:flex-row justify-between items-center gap-10 mt-[160px]">
           <motion.div
@@ -69,7 +73,6 @@ const Hero = () => {
             viewport={{ once: false }}
             className="flex flex-col items-start"
           >
-            {/* 👇 SlideLeft animace pro hlavní nadpis */}
             <h1 className="font-orbi font-bold text-white text-[40px] sm:text-[50px] md:text-[80px] leading-tight">
               Hraj, <br /> Objevuj, Žij.
             </h1>
@@ -82,7 +85,6 @@ const Hero = () => {
             viewport={{ once: false }}
             className="text-right max-w-md text-white"
           >
-            {/* 👇 SlideRight pro text a tlačítka */}
             <p className="text-white/90 mb-4">
               Nejlepší české hry, jejich příběhy a <br />
               oficiální merch – na jednom místě.
@@ -127,11 +129,11 @@ const Hero = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: false }}
-                    src={cyber}
+                    src={gamer}
                     className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                     width={1024}
                     height={490}
-                    alt="AI"
+                    alt="Gamer"
                   />
                 </div>
               </div>

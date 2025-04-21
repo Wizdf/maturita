@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <Top />
-      <div className="bg-black min-h-screen">
+      <div className="bg-[#780000] min-h-screen">
         <Routes>
           {/* ✅ Homepage route with NavBar + sections */}
           <Route

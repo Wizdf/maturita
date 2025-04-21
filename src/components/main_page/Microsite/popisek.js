@@ -1,11 +1,10 @@
 export const myProjects = [
   {
-    title: '🛡️ Kingdom Come: Deliverance',
+    title: ' Kingdom Come: Deliverance',
     desc: '„Středověk bez kompromisů.“ Kingdom Come je historické RPG, které tě vrhne do realistického světa 15. století. Hraješ za Henryho, obyčejného syna kováře, který se zaplete do válečného konfliktu.',
     subdesc: 'Díky autentickému prostředí, soubojům a příběhu nabízí Kingdom Come zážitek, jaký jinde nenajdeš. Připrav se na výzvu bez magie, zato s duší české historie.',
     href: '/kcd',
-    texture: '/textures/project/project1.mp4',
-    logo: '/project-logo1.png',
+    logo: '/kcdicon.png',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -14,12 +13,11 @@ export const myProjects = [
     spotlight: '/spotlight1.png',
   },
   {
-    title: '🪖 Arma Série',
+    title: 'ARMA Série',
     desc: '„Simulace, která definuje žánr.“ Arma je legendární vojenská simulace vytvořená českým studiem Bohemia Interactive. Nabízí obří mapy, taktiku a realistické bojiště.',
     subdesc: 'S podporou modů a komunitních misí se Arma stala základem herního sandboxu pro fanoušky armádních scénářů po celém světě.',
     href: '/arma',
-    texture: '/textures/project/project2.mp4',
-    logo: '/project-logo2.png',
+    logo: '/armaicon.png',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
@@ -28,12 +26,11 @@ export const myProjects = [
     spotlight: '/spotlight2.png',
   },
   {
-    title: '🔫 Mafia Série',
+    title: ' MAFIA Série',
     desc: '„Gangsterská legenda začíná tady.“ Vžij se do role Tommyho Angela v městě Lost Heaven během 30. let. Mafia nabízí filmový příběh, silnou atmosféru a ikonická auta.',
     subdesc: 'Tento český klenot ukázal světu, že herní příběh může být stejně silný jako ten filmový. Čas se vrátit do zlaté éry zločinu.',
     href: '/mafia',
-    texture: '/textures/project/project3.mp4',
-    logo: '/project-logo3.png',
+    logo: '/mafiaicon.png',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -44,12 +41,11 @@ export const myProjects = [
     spotlight: '/spotlight3.png',
   },
   {
-    title: '🚛 Euro Truck Simulator 1–2',
+    title: 'Euro Truck Simulator',
     desc: '„Cesta je cíl.“ Euro Truck je zážitek, který proměnil řízení kamionu v relaxační fenomén. Vyvíjeno českým studiem SCS Software, hra nabízí stovky měst a tisíce kilometrů silnic.',
     subdesc: 'Vytvoř si vlastní dopravní firmu a poznávej Evropu po své ose. Hra, která je o cestě – ne jen o cíli.',
     href: '/eurotruck',
-    texture: '/textures/project/project4.mp4',
-    logo: '/project-logo4.png',
+    logo: '/euroicon.png',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',

@@ -4,23 +4,22 @@ import { SlideUp } from "../../animations/animation";
 
 const Newsletter = () => {
   return (
-    <div className="bg-white max-w-full mx-auto space-y-5 py-14">
+    <div className="bg-[#780000] text-white max-w-full mx-auto space-y-5 py-14">
       <motion.h1
         variants={SlideUp(0.2)}
         initial="initial"
         whileInView="animate"
-        className="text-3xl font-bold font-serif text-center"
+        className="text-3xl font-bold font-orbi text-center"
       >
-        Subsribe to our Newsletter
+        Připoj se k nám
       </motion.h1>
       <motion.p
         variants={SlideUp(0.4)}
         initial="initial"
         whileInView="animate"
-        className="max-w-[300px] mx-auto text-gray-500 text-sm text-center"
+        className="max-w-[450px] mx-auto  text-sm text-center"
       >
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed libero
-        doloremque ab eum!
+        Zájímají vás novinky herní světa v Čechách? Zapište se a mi vám pravidelně budeme poskytovat události a novinky ze světa her.
       </motion.p>
       {/* form here */}
       <motion.div

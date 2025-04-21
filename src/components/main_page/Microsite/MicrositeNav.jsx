@@ -44,7 +44,7 @@ const Projects = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: false }}
-          className="micrositeTitle text-white font-orbi text-4xl sm:text-5xl mt-2"
+          className="micrositeTitle text-white font-orbi text-4xl sm:text-5xl mt-2 mb-8"
         >
           MICROSITES
         </motion.h1>
@@ -58,7 +58,7 @@ const Projects = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: false }}
-          className="projectCard flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl"
+          className="flex flex-col gap-5 bg-gradient-to-br from-[#780000] via-[#2b37a1] to-[#000028] rounded-2xl relative sm:p-10 py-10 px-5 shadow-2xl"
           style={{ boxShadow: currentProject.logoStyle.boxShadow }}
         >
           <div className="absolute top-0 right-0">
@@ -80,16 +80,16 @@ const Projects = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-5 text-white-600 my-5">
-            <motion.p
+          <div className="flex flex-col gap-5 text-white my-5">
+            <motion.h1
               variants={SlideUp(0.4)}
               initial="initial"
               whileInView="animate"
               viewport={{ once: false }}
-              className="text-white text-2xl font-semibold"
+              className="text-white text-[28px] font-orbi"
             >
               {currentProject.title}
-            </motion.p>
+            </motion.h1>
 
             <motion.p
               variants={SlideUp(0.45)}
@@ -120,7 +120,7 @@ const Projects = () => {
             <div></div>
             <Link
               to={currentProject.href}
-              className="flex items-center gap-2 cursor-pointer text-white-600"
+              className="flex items-center gap-2 cursor-pointer text-white"
             >
               <p>Navštívit Microsite</p>
               <img src="/arrow-up.png" alt="arrow" className="w-3 h-3" />

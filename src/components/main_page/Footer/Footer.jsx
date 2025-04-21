@@ -12,7 +12,7 @@ const Footer = () => {
       initial="initial"
       whileInView="animate"
     >
-      <div className="bg-white container max-w-full py-11">
+      <div className="bg-[#780000] text-white container max-w-full py-11">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company info section */}
           <div className="space-y-4 font-semibold">
