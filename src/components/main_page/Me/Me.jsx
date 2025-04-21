@@ -1,27 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaInstagram, FaGithub, FaGlobe, FaPinterest } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
+import { SiReact, SiTailwindcss } from "react-icons/si"; // ✅ New icons
 import { SlideUp } from "../../animations/animation";
 
 const ProfileSection = () => {
   return (
     <div id="og" className="bg-[#E1E1E1] px-12 py-20 flex flex-col items-center text-center">
-      
-
-      
       <div className="flex flex-col md:flex-row items-center mt-8 gap-16">
         
+        {/* 🧑‍💻 Fotka zakladatele */}
         <motion.img
           variants={SlideUp(0.4)}
           initial="initial"
           whileInView="animate"
           viewport={{ once: false }}
           src="/member1.png"
-          alt="Member"
+          alt="Zakladatel"
           className="w-[350px] h-[450px] bg-gray-300 rounded-lg object-cover"
         />
 
-        
+        {/* 📃 Textová část */}
         <motion.div
           variants={SlideUp(0.6)}
           initial="initial"
@@ -29,31 +28,24 @@ const ProfileSection = () => {
           viewport={{ once: false }}
           className="text-left max-w-2xl"
         >
-          
           <h2 className="text-[3em] md:text-[4em] font-orbi mb-6 tracking-tight">
             Viet Tiep Vu
           </h2>
 
-        
-          <p className="text-gray-600 text-xl mb-8">CEO | Coder | Manager</p>
+          <p className="text-gray-600 text-xl mb-8">Founder | Graphic Designer | Developer</p>
 
-          
           <p className="text-gray-700 text-lg leading-relaxed pr-2 mb-8">
-            Jsem hlavním manažerem Ryunome studia, avšak to není vše mám na
-            starost také naši celou webovou stránku a její fukčnost také jsem
-            vytvořil webový design naší stránky. Využil jsem k tomu mé znalosti
-            a kreativitu a schopnost ovládat programy a jazyky jako je Figma,
-            ReactJs, Tailwind, GSAP, Photoshop apod.
+            Jsem zakladatelem NeoBohemia – projektu, který propojuje českou herní scénu s moderním designem a technologií. Navrhuji, kóduji a tvořím celý vizuální a funkční směr značky. Web je postaven pomocí Reactu, Tailwindu a dalších technologií, a reflektuje nejen moji vášeň pro hry, ale i pro detail a kreativitu.
           </p>
 
-         
+          {/* 💻 Tech stack ikony */}
           <div className="flex gap-8">
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-800 transition-colors"
-            >
-              <FaInstagram size={40} />
-            </a>
+            <span className="text-cyan-500">
+              <SiReact size={40} title="React" />
+            </span>
+            <span className="text-sky-400">
+              <SiTailwindcss size={40} title="Tailwind CSS" />
+            </span>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-800 transition-colors"
@@ -65,12 +57,6 @@ const ProfileSection = () => {
               className="text-gray-500 hover:text-gray-800 transition-colors"
             >
               <FaGlobe size={40} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-500 hover:text-gray-800 transition-colors"
-            >
-              <FaPinterest size={40} />
             </a>
           </div>
         </motion.div>
