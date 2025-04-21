@@ -153,9 +153,9 @@ export default function ContactForm() {
 
             {/* ✅ Ikony sociálních sítí */}
             <div className="flex space-x-4 mb-6 text-[#780000]">
-              <FaInstagram size={30} className="hover:text-white transition-colors duration-200" />
-              <FaEnvelope size={30} className="hover:text-white transition-colors duration-200" />
-              <FaGlobe size={30} className="hover:text-white transition-colors duration-200" />
+              <a href="https://www.instagram.com/neobohemia.eu/?utm_source=ig_web_button_share_sheet"><FaInstagram size={30} className="hover:text-white transition-colors duration-200" /></a>
+              <a href="mailto:viet.vu@student.soskolin.cz"><FaEnvelope size={30} className="hover:text-white transition-colors duration-200" /></a>
+              <a href="https://vu.soskolin.eu/"><FaGlobe size={30} className="hover:text-white transition-colors duration-200" /></a>
             </div>
 
             {/* ✅ 3D model */}
